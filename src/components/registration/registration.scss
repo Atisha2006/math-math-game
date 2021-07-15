@@ -1,0 +1,17 @@
+.registration {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  height: 64px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hidden {
+    display: none;
+  }
+}
+.btn_registration {
+  width: 200px;
+  height: 40px;
+}

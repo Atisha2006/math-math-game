@@ -1,0 +1,186 @@
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 600px;
+  height: 420px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__inner {
+  position: relative;
+  width: 55%;
+}
+.form__img-wrapper{
+  position: relative;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  &:hover::after{
+    content: '+';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    font-size: 200px;
+    line-height: 200px;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(1, 1, 1, 0.8);
+    z-index: 1;
+  }
+}
+.user__input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  z-index: 20;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.form__user-img{
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover + .user__input{
+    display: block;
+  }
+}
+.user__input{
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    color: #fff;
+    font-size: 200px;
+    line-height: 220px;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(1, 1, 1, 0.8);
+    z-index: 10;
+    cursor: pointer;
+}
+.button__field {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+
+.form__title {
+  display: block;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 24px;
+  line-height: 1em;
+  color: #333;
+  margin: 0 0 30px;
+}
+
+.input__wrapper {
+  position: relative;
+  margin: 15px 0;
+  background-color: #eee;
+  border-bottom: 1px solid #333;
+}
+
+.form__label {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #888;
+}
+.form__error {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  padding: 0 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: red;
+}
+
+.form__input {
+  outline: none;
+  width: 100%;
+  height: 60px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #444;
+  background-color: transparent;
+  border-radius: 2px;
+  position: relative;
+  padding: 24px 50px 6px 30px;
+  border: none;
+  &.invalid{
+    box-shadow: inset 0 0 20px rgba(245, 113, 146, 0.75)
+  }
+}
+
+.form__input.valid +.form__error::before{
+  position: absolute;
+  top: 34px;
+  right: 15px;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgba(16, 140, 140, 0.1);
+}
+
+.form__input.valid + .form__error::after {
+  position: absolute;
+  top: 42px;
+  right: 23px;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: rgba(16, 140, 140, 0.75);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.btn {
+  margin: 0 0 0 20px;
+}

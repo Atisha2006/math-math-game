@@ -1,0 +1,19 @@
+.cards-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 90px 0 0;
+}
+.cards-field.hard,
+.cards-field.medium {
+  & .card-container {
+    margin: 5px 0;
+    flex: 0 0 16%;
+  }
+  & .card {
+    width: 8rem;
+    height: 8rem;
+  }
+}
